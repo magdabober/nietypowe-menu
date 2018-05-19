@@ -5,56 +5,56 @@ body {
 header.main-header {
     background-color: blue;
     position: relative;
-    width: 100%;
-/*
-    width:0; 
-     height:100px; 
-     border-right:50vh solid blue;
-     border-left:50vh solid blue;
-     border-bottom:30px solid transparent;
-*/
+}
+
+header.main-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    border-bottom: 60px solid transparent;
+    border-left: 800px solid blue;
+    width: 0;
+    height: 0; 
 }
 
 header.main-header::after {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: -30px;
-    height: 30px; 
-    border-bottom: 30px solid transparent;
-    border-left: 683px solid blue;
-    border-right: 683px solid blue;
+    right: 0;
+    bottom: -60px;
+    border-bottom: 60px solid transparent;
+    border-right: 800px solid blue;
     width: 0;
-    height: 0;
-    
+    height: 0; 
 }
 
 header.main-header nav.main-nav {
-    background-color: blue;
-    display: inline-block;
-    width: 50%;
-    float: left;
     box-sizing: border-box;
-    padding: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+header.main-header nav.main-nav ul.nav-inner {
+    width: 50%;
     list-style: none;
     text-transform: uppercase;
-    transition: all 0s linear;
+    padding: 0;
+    float: left;
 }
 
-/*
-header.main-header nav.main-nav:hover {
-    height: 80px;
-}
-*/
-
-header.main-header nav.main-nav li.inner-right {
-    text-align: right;
+header.main-header nav.main-nav ul.nav-inner li {
+    display: inline-block;
 }
 
-header.main-header nav.main-nav li.nav-inner a {
+header.main-header nav.main-nav ul.nav-inner a {
     color: white;
     text-decoration: none;
     padding: 0 20px;
+}
+
+header.main-header nav.main-nav ul.inner-right {
+    text-align: right;
 }
 
 div.clear {
